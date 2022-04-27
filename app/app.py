@@ -1,6 +1,5 @@
+## Data Inputs
 
-
-<<<<<<< HEAD
 data = {"number": "L21", "members": [], 
 "chores": [], "emails":[]}
 
@@ -13,6 +12,7 @@ userinput = input("Enter the name of the roommate:")
 while userinput != exit_loop:
     data["members"].append(userinput)
     userinput = input("Enter the name of the roommate:")
+    
 
 userinput = input("Enter the chore:")
 
@@ -20,48 +20,37 @@ while userinput != exit_loop:
     data["chores"].append(userinput) 
     userinput = input("Enter the chore:")
 
-userinput = input("Enter the roommate's email:")
-
-while userinput != exit_loop:
-    data["emails"].append(userinput)
-    userinput = input("Enter the roommate's email:")
-
-print(data)
 
 
-#############
-=======
-data = {"members": ["Catie", "Maddie", "Meher", "Nina", "Rebecca"], 
-"chores": ["vaccuming", "kitchen counters", "stove", "kitchen and dining table", 
-"kitchen sink", "bathroom counter", "mirror", "showers", "toilets", "trash and recycling"]}
->>>>>>> 8b6b4f23bde0e2468b055bce6a0615f41993d280
 
+## App Structure
 
 import random
 
-chores = data["chores"]
-
-assignments = {}
+assignments = dict()
 
 for member in data["members"]:
-<<<<<<< HEAD
-    task_1 = ''.join(random.sample(chores, 1))
-    chores.remove(task_1)
-    task_2 = ''.join(random.sample(chores, 1))
-    chores.remove(task_2)
-    print(member, ":", task_1, ",", task_2) 
-=======
     assignments[member] = []
 
-while len(chores) > 0:
-    for member in data["members"]:
-        task = ''.join(random.choice(chores))
-        chores.remove(task)
-        assignments[member].append(task)
+for member in assignments:
+   assignments[member] = dict()
+   assignments[member]["tasks"] = []
+
 
 for member in assignments:
-    email = input(f'Please enter {member}s email addresss:')
-    #assignments[member]["email"] = email
+    email = input(f'Please enter the email for {member}:')
+    assignments[member]["email"] = email
+
+
+chores = data["chores"]
+
+while len(chores) > 0:
+    for member in assignments:
+        task = random.choice(chores)
+        chores.remove(task)
+        assignments[member]["tasks"].append(task)
 
 print(assignments)
->>>>>>> 8b6b4f23bde0e2468b055bce6a0615f41993d280
+
+for member in assignments:    
+    print(member, ":", assignments[member]["tasks"])
