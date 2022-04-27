@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 data = {"number": "L21", "members": [], 
 "chores": [], "emails":[]}
 
@@ -29,13 +30,21 @@ print(data)
 
 
 #############
+=======
+data = {"members": ["Catie", "Maddie", "Meher", "Nina", "Rebecca"], 
+"chores": ["vaccuming", "kitchen counters", "stove", "kitchen and dining table", 
+"kitchen sink", "bathroom counter", "mirror", "showers", "toilets", "trash and recycling"]}
+>>>>>>> 8b6b4f23bde0e2468b055bce6a0615f41993d280
 
 
 import random
 
 chores = data["chores"]
 
+assignments = {}
+
 for member in data["members"]:
+<<<<<<< HEAD
     task_1 = ''.join(random.sample(chores, 1))
     chores.remove(task_1)
     task_2 = ''.join(random.sample(chores, 1))
