@@ -6,12 +6,15 @@ data = {"number": "L21", "members": [],
 #three inputs: members, chores, emails
 #three keys, 5, 10, 5 values
 
+Dict = {}
 exit_loop = "exit"
 userinput = input("Enter the name of the roommate:")
 
 while userinput != exit_loop:
     data["members"].append(userinput)
     userinput = input("Enter the name of the roommate:")
+    Dict[]
+    
 
 userinput = input("Enter the chore:")
 
@@ -27,8 +30,38 @@ while userinput != exit_loop:
 
 print(data)
 
+Dict = {}
+
 
 #############
+
+Dict = {}
+Dict['name'] = input("Enter the name of the roommate:")
+
+#adding elements one at a time
+Dict['name'].append(Dict['name'])
+Dict['Dict1']['age'] = 21
+print(Dict)
+
+Dict['name']
+
+#while userinput != exit_loop:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################
 
 
 import random
