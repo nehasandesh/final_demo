@@ -50,3 +50,18 @@ for member in data["members"]:
     task_2 = ''.join(random.sample(chores, 1))
     chores.remove(task_2)
     print(member, ":", task_1, ",", task_2) 
+=======
+    assignments[member] = []
+
+while len(chores) > 0:
+    for member in data["members"]:
+        task = ''.join(random.choice(chores))
+        chores.remove(task)
+        assignments[member].append(task)
+
+for member in assignments:
+    email = input(f'Please enter {member}s email addresss:')
+    #assignments[member]["email"] = email
+
+print(assignments)
+>>>>>>> 8b6b4f23bde0e2468b055bce6a0615f41993d280
